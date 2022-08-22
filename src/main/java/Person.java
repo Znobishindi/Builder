@@ -13,6 +13,7 @@ public class Person {
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
+
     }
 
     public Person(String name, String surname, int age) {
@@ -77,12 +78,16 @@ public class Person {
         return new PersonBuilder();
     }
 
+    public void happyBirthday() {
+        this.age++;
+    }
+
     @Override
     public String toString() {
         String info = name;
         if (surname != null) info = info + " " + surname;
         if (age != null) info = info + " возраст " + age;
         if (address != null) info = info + ", проживающий(ей) в городе " + address;
-            return info;
+        return info;
     }
 }

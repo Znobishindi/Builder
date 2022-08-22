@@ -9,8 +9,13 @@ public class Main {
         Person son = mom.newChildBuilder()
                 .setName("Антошка")
                 .setSurname("Вольф")
+                .setAge(4)
                 .build();
+
         System.out.println("У " + mom + " есть сын, " + son);
+
+        son.happyBirthday();
+        System.out.println(son);
 
         try {
             // Не хватает обязательных полей

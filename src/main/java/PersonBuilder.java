@@ -5,7 +5,6 @@ public class PersonBuilder {
     protected String address;
 
 
-
     public PersonBuilder(Person person) {
         name = person.name;
     }
@@ -27,7 +26,7 @@ public class PersonBuilder {
         if (age < 0 || age > 110) {
             throw new IllegalArgumentException("Возраст " + age + " должен быть в пределах от 0 до 110");
         }
-        this.age = age;
+        if (this.age == null) this.age = age;
         return this;
     }
 
